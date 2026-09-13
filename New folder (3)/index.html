@@ -4,12 +4,13 @@
   <meta charset="utf-8">
   <meta name="viewport" content="width=device-width, initial-scale=1, viewport-fit=cover">
   <meta name="description" content="Mohadese Ghiasi — Visual Artist. Graphic design, photography, painting and illustration portfolio.">
-  <meta name="keywords" content="Mohadese Ghiasi, visual artist, graphic design, photography, painting, illustration, portfolio">
+  <meta name="keywords" content="Mohadese Ghiasi, Mohadese Bayat Ghiasi, محدثه غیاثی, محدثه بیات غیاثی, محدثه غیاثی گرافیک, graphic design, visual artist, photography, painting, illustration, portfolio">
   <meta name="author" content="Mohadese Ghiasi">
+  <meta name="alternate-name" content="Mohadese Bayat Ghiasi, محدثه غیاثی, محدثه بیات غیاثی, محدثه غیاثی گرافیک">
   <meta name="robots" content="index,follow">
   <meta property="og:title" content="Mohadese Ghiasi — Visual Art">
   <meta property="og:description" content="Portfolio of Mohadese Ghiasi, a visual artist working across graphic design, photography, painting and illustration.">
-  <title>Mohadese Ghiasi — Visual Art</title>
+  <title>Mohadese Ghiasi | Mohadese Bayat Ghiasi | Graphic Design Portfolio</title>
 
   <link rel="preconnect" href="https://fonts.googleapis.com">
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
@@ -36,37 +37,6 @@
       --soft:rgba(238,232,220,.055);
     }
 
-
-    @font-face{
-      font-family:"Ekraan";
-      src:url("Ekraan Light.otf") format("opentype");
-      font-weight:300;
-      font-style:normal;
-      font-display:swap;
-    }
-    @font-face{
-      font-family:"Ekraan";
-      src:url("Ekraan Medium.otf") format("opentype");
-      font-weight:500;
-      font-style:normal;
-      font-display:swap;
-    }
-
-    @font-face{
-      font-family:"AbarMid";
-      src:url("fonts/AbarMid-Regular.ttf") format("truetype");
-      font-weight:400;
-      font-style:normal;
-      font-display:swap;
-    }
-    @font-face{
-      font-family:"AbarMid";
-      src:url("fonts/AbarMid-bold.ttf") format("truetype");
-      font-weight:700;
-      font-style:normal;
-      font-display:swap;
-    }
-
     *{box-sizing:border-box}
     html{scroll-behavior:smooth}
     body{
@@ -76,10 +46,6 @@
       font-family:Manrope,Arial,sans-serif;
       overflow-x:hidden;
       transition:background .45s ease,color .45s ease;
-    }
-    body.fa{
-      font-family:"Ekraan",Arial,sans-serif;
-      font-weight:300;
     }
     a{color:inherit;text-decoration:none}
     button{font:inherit}
@@ -121,7 +87,6 @@
       text-transform:uppercase;
       letter-spacing:.23em;
     }
-    body.fa .brand-name{font-family:"Ekraan";font-weight:500;letter-spacing:0}
     .nav-right{display:flex;align-items:center;gap:25px}
     nav{display:flex;align-items:center;gap:25px}
     nav a{
@@ -231,8 +196,6 @@
       font-size:10px;
       line-height:1.8;
     }
-    body.fa .hero-copy{left:auto;right:4%;text-align:right}
-    body.fa .hero-copy h1{font-family:"Ekraan";font-weight:500;letter-spacing:0}
 
     /* COMMON SECTIONS */
     section{scroll-margin-top:105px}
@@ -259,11 +222,6 @@
       font:400 clamp(40px,5.5vw,72px)/.86 "DM Serif Display",serif;
       letter-spacing:-.055em;
     }
-    body.fa .section-title{
-      font-family:"Ekraan";
-      font-weight:700;
-      letter-spacing:0;
-    }
 
     /* ABOUT */
     .about-grid{
@@ -276,7 +234,6 @@
       font:400 clamp(25px,3vw,43px)/1.18 "DM Serif Display",serif;
       letter-spacing:-.025em;
     }
-    body.fa .about-lead{font-family:"Ekraan";font-weight:300;letter-spacing:0;line-height:1.9}
     .about-lead em{color:var(--green)}
     .about-detail{
       border-top:1px solid var(--line);
@@ -374,7 +331,6 @@
     .caption-name{
       font:400 19px/1 "DM Serif Display",serif;
     }
-    body.fa .caption-name{font-family:"Ekraan";font-size:14px;font-weight:500}
     .caption-meta{
       color:var(--muted);
       font-size:8px;
@@ -420,7 +376,6 @@
     .contact-lead{
       font:400 clamp(25px,3vw,43px)/1.18 "DM Serif Display",serif;
     }
-    body.fa .contact-lead{font-family:"Ekraan";font-weight:300;line-height:1.9}
     .contact-list{border-top:1px solid var(--line)}
     .contact-row{
       display:grid;
@@ -482,7 +437,6 @@
       position:relative;z-index:2;
       font:400 24px/1 "DM Serif Display",serif;
     }
-    body.fa .store-name{font-family:"Ekraan";font-size:15px;font-weight:500}
 
     /* FLOATING CONTACT */
     .contact-fab{
@@ -525,7 +479,6 @@
       margin:0 0 16px;
       font:400 30px/1 "DM Serif Display",serif;
     }
-    body.fa .contact-panel h3{font-family:"Ekraan";font-size:22px;font-weight:500}
     .panel-row{
       display:grid;
       grid-template-columns:26px 1fr;
@@ -632,10 +585,6 @@
       transform:translateX(5px);
       letter-spacing:-.045em;
     }
-    body.fa .section-head:hover .section-title{
-      transform:translateX(-5px);
-      letter-spacing:0;
-    }
     .about-lead em{
       transition:color .35s ease,text-shadow .45s ease;
     }
@@ -674,9 +623,6 @@
     }
     .contact-row:hover{
       transform:translateX(4px);
-    }
-    body.fa .contact-row:hover{
-      transform:translateX(-4px);
     }
     .contact-row img{
       transition:transform .45s var(--ease);
@@ -724,22 +670,18 @@
 
   <header>
     <a class="brand" href="#home" aria-label="Mohadese Ghiasi">
-      <span class="brand-name" data-i18n="brand">Mohadese Ghiasi</span>
-      <span class="brand-sub" data-i18n="brandSub">Visual Art</span>
+      <span class="brand-name">Mohadese Ghiasi</span>
+      <span class="brand-sub">Visual Art</span>
     </a>
 
     <div class="nav-right">
       <nav>
-        <a href="#about" data-i18n="navAbout">About</a>
-        <a href="#portfolio" data-i18n="navPortfolio">Portfolio</a>
-        <a href="#store" data-i18n="navStore">Store</a>
-        <a href="#contact" data-i18n="navContact">Contact</a>
+        <a href="#about">About</a>
+        <a href="#portfolio">Portfolio</a>
+        <a href="#store">Store</a>
+        <a href="#contact">Contact</a>
       </nav>
       <div class="tools">
-        <div class="lang-switch" aria-label="Language">
-          <button class="lang active" data-lang="en">EN</button>
-          <button class="lang" data-lang="fa">FA</button>
-        </div>
         <button class="tool-btn" id="themeToggle" aria-label="Toggle dark mode">☾</button>
       </div>
     </div>
@@ -751,9 +693,10 @@
         <img class="hero-image" src="images/hero.jpg" alt="Mohadese Ghiasi Visual Art hero image">
         <div class="hero-overlay"></div>
         <div class="hero-copy">
-          <div class="eyebrow" data-i18n="heroEyebrow">Visual Artist</div>
+          <div class="eyebrow">Visual Artist</div>
           <h1>Mohadese<br>Ghiasi</h1>
-          <p data-i18n="heroText">Exploring visual language through image, form, atmosphere and detail.</p>
+          <meta itemprop="alternateName" content="Mohadese Bayat Ghiasi, محدثه غیاثی, محدثه بیات غیاثی, محدثه غیاثی گرافیک">
+          <p>Exploring visual language through image, form, atmosphere and detail.</p>
         </div>
       </div>
     </section>
@@ -761,22 +704,22 @@
     <section class="section" id="about">
       <div class="section-head">
         <div>
-          <div class="eyebrow-green" data-i18n="aboutEyebrow">01 / About</div>
-          <h2 class="section-title" data-i18n="aboutTitle">About the artist</h2>
+          <div class="eyebrow-green">01 / About</div>
+          <h2 class="section-title">About the artist</h2>
         </div>
       </div>
       <div class="about-grid">
-        <div class="about-lead" data-i18n="aboutLead">
+        <div class="about-lead">
           I’m a visual artist and <em>graphic design student</em>, and I like exploring different ways of working with images. My work moves between photography, painting, illustration and graphic design, depending on the idea and what I want to say.
         </div>
         <div class="about-detail">
-          <p data-i18n="aboutDetail">
+          <p>
             I’m mostly interested in visual storytelling, composition and atmosphere. I’m still learning and experimenting, and I enjoy letting each project lead me toward a different visual language.
           </p>
           <div class="about-facts">
-            <div class="fact"><small data-i18n="fact1a">Practice</small><span data-i18n="fact1b">Visual Art</span></div>
-            <div class="fact"><small data-i18n="fact2a">Education</small><span data-i18n="fact2b">Graphic Design — Student</span></div>
-            <div class="fact"><small data-i18n="fact3a">Fields</small><span data-i18n="fact3b">Photography / Painting / Graphic / Illustration</span></div>
+            <div class="fact"><small>Practice</small><span>Visual Art</span></div>
+            <div class="fact"><small>Education</small><span>Graphic Design — Student</span></div>
+            <div class="fact"><small>Fields</small><span>Photography / Painting / Graphic / Illustration</span></div>
           </div>
         </div>
       </div>
@@ -785,8 +728,8 @@
     <section class="section portfolio" id="portfolio">
       <div class="section-head">
         <div>
-          <div class="eyebrow-green" data-i18n="portfolioEyebrow">02 / Selected work</div>
-          <h2 class="section-title" data-i18n="portfolioTitle">Portfolio</h2>
+          <div class="eyebrow-green">02 / Selected work</div>
+          <h2 class="section-title">Portfolio</h2>
         </div>
         <div class="eyebrow-green"><span id="pageNo">01</span> / 40</div>
       </div>
@@ -800,7 +743,7 @@
         </div>
 
         <div class="book-controls">
-          <div class="book-hint" data-i18n="swipeHint">Swipe right → left to move forward · swipe left → right to go back</div>
+          <div class="book-hint">Swipe right → left to move forward · swipe left → right to go back</div>
           <div class="arrows">
             <button class="round" id="prev" aria-label="Previous page">←</button>
             <button class="round" id="next" aria-label="Next page">→</button>
@@ -812,42 +755,47 @@
     <section class="section" id="store">
       <div class="section-head">
         <div>
-          <div class="eyebrow-green" data-i18n="storeEyebrow">03 / Editions & objects</div>
-          <h2 class="section-title" data-i18n="storeTitle">Store</h2>
+          <div class="eyebrow-green">03 / Editions & objects</div>
+          <h2 class="section-title">Store</h2>
         </div>
-        <div class="eyebrow-green" data-i18n="coming">Coming soon</div>
+        <div class="eyebrow-green">Coming soon</div>
       </div>
       <div class="store-grid">
-        <article class="store-card"><span class="store-no">01</span><span class="store-name" data-i18n="print1">Print I</span><span class="store-status" data-i18n="coming">Coming soon</span></article>
-        <article class="store-card"><span class="store-no">02</span><span class="store-name" data-i18n="print2">Print II</span><span class="store-status" data-i18n="coming">Coming soon</span></article>
-        <article class="store-card"><span class="store-no">03</span><span class="store-name" data-i18n="edition1">Edition I</span><span class="store-status" data-i18n="coming">Coming soon</span></article>
-        <article class="store-card"><span class="store-no">04</span><span class="store-name" data-i18n="edition2">Edition II</span><span class="store-status" data-i18n="coming">Coming soon</span></article>
+        <article class="store-card"><span class="store-no">01</span><span class="store-name">Print I</span><span class="store-status">Coming soon</span></article>
+        <article class="store-card"><span class="store-no">02</span><span class="store-name">Print II</span><span class="store-status">Coming soon</span></article>
+        <article class="store-card"><span class="store-no">03</span><span class="store-name">Edition I</span><span class="store-status">Coming soon</span></article>
+        <article class="store-card"><span class="store-no">04</span><span class="store-name">Edition II</span><span class="store-status">Coming soon</span></article>
       </div>
     </section>
     <section class="section" id="contact">
       <div class="section-head">
         <div>
-          <div class="eyebrow-green" data-i18n="contactEyebrow">04 / Contact</div>
-          <h2 class="section-title" data-i18n="contactTitle">Get in touch</h2>
+          <div class="eyebrow-green">04 / Contact</div>
+          <h2 class="section-title">Get in touch</h2>
         </div>
       </div>
       <div class="contact-grid">
-        <div class="contact-lead" data-i18n="contactLead">For selected visual projects, commissions and creative conversations.</div>
+        <div class="contact-lead">For selected visual projects, commissions and creative conversations.</div>
         <div class="contact-list">
           <a class="contact-row" href="https://instagram.com/mohadesh_ghiasii" target="_blank" rel="noopener">
             <img src="images/instagram.svg" alt="">
-            <span data-i18n="instagram">Instagram</span>
+            <span>Instagram</span>
             <small>@mohadesh_ghiasii</small>
           </a>
           <a class="contact-row" href="https://t.me/joobism" target="_blank" rel="noopener">
             <img src="images/telegram.svg" alt="">
-            <span data-i18n="telegram">Telegram</span>
+            <span>Telegram</span>
             <small>@mohadesh_ghiasii</small>
           </a>
           <a class="contact-row" href="tel:+982133401226">
             <img src="images/phone.svg" alt="">
-            <span data-i18n="phone">Phone</span>
+            <span>Phone</span>
             <small>021 33401226</small>
+          </a>
+          <a class="contact-row" href="mailto:Mohadeseghiasi.portfolio@gmail.com">
+            <img src="images/email.svg" alt="">
+            <span>Email</span>
+            <small>Mohadeseghiasi.portfolio@gmail.com</small>
           </a>
         </div>
       </div>
@@ -855,24 +803,27 @@
   </main>
 
   <footer>
-    <span data-i18n="footer1">© 2026 Mohadese Ghiasi</span>
-    <span data-i18n="footer2">Visual Art / Graphic / Photography / Painting / Illustration</span>
+    <span>© 2026 Mohadese Ghiasi</span>
+    <span>Visual Art / Graphic / Photography / Painting / Illustration</span>
   </footer>
 
   <button class="contact-fab" id="contactFab" aria-label="Open contact">
-    <span>✦</span><span class="fab-text" data-i18n="contact">Contact</span>
+    <span>✦</span><span class="fab-text">Contact</span>
   </button>
 
   <aside class="contact-panel" id="contactPanel">
-    <h3 data-i18n="panelTitle">Get in touch.</h3>
+    <h3>Get in touch.</h3>
     <a class="panel-row" href="https://instagram.com/mohadesh_ghiasii" target="_blank" rel="noopener">
-      <img src="images/instagram.svg" alt=""><div><small data-i18n="instagram">Instagram</small><strong>@mohadesh_ghiasii</strong></div>
+      <img src="images/instagram.svg" alt=""><div><small>Instagram</small><strong>@mohadesh_ghiasii</strong></div>
     </a>
     <a class="panel-row" href="https://t.me/joobism" target="_blank" rel="noopener">
-      <img src="images/telegram.svg" alt=""><div><small data-i18n="telegram">Telegram</small><strong>@joobism</strong></div>
+      <img src="images/telegram.svg" alt=""><div><small>Telegram</small><strong>@joobism</strong></div>
     </a>
     <a class="panel-row" href="tel:+982133401226">
-      <img src="images/phone.svg" alt=""><div><small data-i18n="phone">Phone</small><strong>021 33401226</strong></div>
+      <img src="images/phone.svg" alt=""><div><small>Phone</small><strong>021 33401226</strong></div>
+    </a>
+    <a class="panel-row" href="mailto:Mohadeseghiasi.portfolio@gmail.com">
+      <img src="images/email.svg" alt=""><div><small>Email</small><strong>Mohadeseghiasi.portfolio@gmail.com</strong></div>
     </a>
   </aside>
 
@@ -942,7 +893,7 @@ let drag = null;
 
 works.forEach((w,i) => {
   const n = String(i+1).padStart(2,"0");
-  const imageSrc = i === 0 ? "images/01.jpg" : "images/comingsoon.webp";
+  const imageSrc = i === 0 ? "images/01.jpg" : "images/comingsoon.jpg";
 
   const p = document.createElement("article");
   p.className = "page";
@@ -1020,25 +971,6 @@ works.forEach((w,i) => {
 
   updateBook();
 
-  // LANGUAGE
-  const langButtons = document.querySelectorAll(".lang");
-  function applyLanguage(lang){
-    const t = I18N[lang];
-    document.documentElement.lang = lang;
-    document.documentElement.dir = lang==="fa" ? "rtl" : "ltr";
-    document.body.classList.toggle("fa",lang==="fa");
-    document.querySelectorAll("[data-i18n]").forEach(el=>{
-      const key = el.dataset.i18n;
-      if(t[key] !== undefined) el.innerHTML = t[key];
-    });
-    document.getElementById("rotateToast").textContent = t.rotate;
-    langButtons.forEach(b=>b.classList.toggle("active",b.dataset.lang===lang));
-    localStorage.setItem("mohadese-lang",lang);
-    document.title = lang==="fa" ? "محدثه غیاثی — Visual Art" : "Mohadese Ghiasi — Visual Art";
-  }
-  langButtons.forEach(b=>b.addEventListener("click",()=>applyLanguage(b.dataset.lang)));
-  applyLanguage(localStorage.getItem("mohadese-lang") || "en");
-
   // DARK MODE
   const themeToggle = document.getElementById("themeToggle");
   function setTheme(dark){
@@ -1056,13 +988,13 @@ works.forEach((w,i) => {
     e.stopPropagation();
     const open = panel.classList.toggle("open");
     fab.classList.toggle("open",open);
-    fab.querySelector(".fab-text").textContent = open ? (document.documentElement.lang==="fa"?"بستن":"Close") : (document.documentElement.lang==="fa"?"تماس":"Contact");
+    fab.querySelector(".fab-text").textContent = open ? "Close" : "Contact";
   });
   panel.addEventListener("click",e=>e.stopPropagation());
   document.addEventListener("click",()=>{
     panel.classList.remove("open");
     fab.classList.remove("open");
-    fab.querySelector(".fab-text").textContent = document.documentElement.lang==="fa"?"تماس":"Contact";
+    fab.querySelector(".fab-text").textContent = "Contact";
   });
 
   // Mobile-only, portfolio-only rotation suggestion. It appears for one second.
