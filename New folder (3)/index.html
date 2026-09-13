@@ -4,12 +4,13 @@
   <meta charset="utf-8">
   <meta name="viewport" content="width=device-width, initial-scale=1, viewport-fit=cover">
   <meta name="description" content="Mohadese Ghiasi — Visual Artist. Graphic design, photography, painting and illustration portfolio.">
- <meta name="keywords" content="Mohadese Ghiasi, محدثه غیاثی, محدثه غیاثی گرافیک, Visual Artist, Graphic Design, Photography, Painting, Illustration">
+  <meta name="keywords" content="Mohadese Ghiasi, Mohadese Bayat Ghiasi, محدثه غیاثی, محدثه بیات غیاثی, محدثه غیاثی گرافیک, graphic design, visual artist, photography, painting, illustration, portfolio">
   <meta name="author" content="Mohadese Ghiasi">
+  <meta name="alternate-name" content="Mohadese Bayat Ghiasi, محدثه غیاثی, محدثه بیات غیاثی, محدثه غیاثی گرافیک">
   <meta name="robots" content="index,follow">
   <meta property="og:title" content="Mohadese Ghiasi — Visual Art">
   <meta property="og:description" content="Portfolio of Mohadese Ghiasi, a visual artist working across graphic design, photography, painting and illustration.">
-  <title>Mohadese Ghiasi | Visual Artist & Graphic Design</title>
+  <title>Mohadese Ghiasi | Mohadese Bayat Ghiasi | Graphic Design Portfolio</title>
 
   <link rel="preconnect" href="https://fonts.googleapis.com">
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
@@ -489,25 +490,6 @@
     .panel-row small{display:block;color:var(--muted);font-size:7px;text-transform:uppercase;letter-spacing:.12em}
     .panel-row strong{font-size:10px;font-weight:500}
 
-    /* TOAST */
-    .rotate-toast{
-      position:fixed;
-      z-index:80;
-      left:50%;bottom:22px;
-      transform:translate(-50%,16px);
-      opacity:0;
-      pointer-events:none;
-      background:var(--ink);
-      color:var(--paper);
-      border:1px solid var(--line);
-      padding:10px 15px;
-      font-size:8px;
-      letter-spacing:.04em;
-      white-space:nowrap;
-      transition:.3s var(--ease);
-    }
-    .rotate-toast.show{opacity:1;transform:translate(-50%,0)}
-
     footer{
       padding:30px 4.5vw;
       border-top:1px solid var(--line);
@@ -698,6 +680,7 @@
         <div class="hero-copy">
           <div class="eyebrow">Visual Artist</div>
           <h1>Mohadese<br>Ghiasi</h1>
+          <meta itemprop="alternateName" content="Mohadese Bayat Ghiasi, محدثه غیاثی, محدثه بیات غیاثی, محدثه غیاثی گرافیک">
           <p>Exploring visual language through image, form, atmosphere and detail.</p>
         </div>
       </div>
@@ -707,7 +690,7 @@
       <div class="section-head">
         <div>
           <div class="eyebrow-green">01 / About</div>
-          <h2 class="section-title">About the artist</h2>
+          <h2 class="section-title">About Me</h2>
         </div>
       </div>
       <div class="about-grid">
@@ -829,23 +812,43 @@
     </a>
   </aside>
 
-  <div class="rotate-toast" id="rotateToast">For a better experience, you can rotate your phone.</div>
-
-<script type="application/ld+json">
-{
-  "@context": "https://schema.org",
-  "@type": "Person",
-  "name": "Mohadese Ghiasi",
-  "alternateName": "محدثه غیاثی",
-  "url": "https://mohadeseghiasi.ir/",
-  "jobTitle": "Visual Artist",
-  "description": "Mohadese Ghiasi is a visual artist and graphic design student working across graphic design, photography, painting and illustration.",
-  "sameAs": [
-    "https://instagram.com/mohadesh_ghiasii",
-    "https://t.me/joobism",
-  ]
-}
-</script>
+<script>
+(() => {
+  const I18N = {
+    en:{
+      brand:"Mohadese Ghiasi", brandSub:"Visual Art",
+      navAbout:"About", navPortfolio:"Portfolio", navStore:"Store", navContact:"Contact",
+      heroEyebrow:"Visual Artist",
+      heroText:"Exploring visual language through image, form, atmosphere and detail.",
+      aboutEyebrow:"01 / About", aboutTitle:"About Me",
+      aboutLead:"I’m a visual artist and <strong>graphic design student</strong>, and I enjoy exploring ideas through different visual paths. Depending on the subject and the atmosphere I want to create, I move between photography, painting, illustration and graphic design.",
+      aboutDetail:"If you’d like to talk about a project, collaboration or even an idea together, I’d be happy to hear from you.",
+      fact1a:"Practice",fact1b:"Visual Art",fact2a:"Education",fact2b:"Graphic Design — Student",fact3a:"Fields",fact3b:"Photography / Painting /Illustration & painting",fact4a:"Also",fact4b:"Graphic / Illustration",
+      portfolioEyebrow:"02 / Selected work",portfolioTitle:"Portfolio",
+      swipeHint:"Swipe right → left to move forward · swipe left → right to go back",
+      contactEyebrow:"04 / Contact",contactTitle:"Get in touch",contactLead:"If you’d like to talk about a project, collaboration or even an idea together, I’d be happy to hear from you.",
+      instagram:"Instagram",telegram:"Telegram",phone:"Phone",storeEyebrow:"03 / Editions & objects",storeTitle:"Store",coming:"Coming soon",
+      print1:"Print I",print2:"Print II",edition1:"Edition I",edition2:"Edition II",
+      footer1:"© 2026 Mohadese Ghiasi",footer2:"Visual Art / Graphic / Photography / Painting / Illustration",panelTitle:"Get in touch.",
+    },
+    fa:{
+      brand:"محدثه غیاثی",brandSub:"Visual Art",
+      navAbout:"درباره",navPortfolio:"پورتفولیو",navStore:"فروشگاه",navContact:"تماس",
+      heroEyebrow:"Visual Artist",
+      heroText:"جست‌وجوی زبان بصری از مسیر تصویر، فرم، فضا و جزئیات.",
+      aboutEyebrow:"۰۱ / درباره",aboutTitle:"درباره من",
+      aboutLead:"من یک هنرمند بصری و <strong>دانشجوی گرافیکم</strong> و علاقه‌مندم ایده‌ها رو از مسیرهای مختلف تصویری تجربه کنم. بسته به موضوع و فضایی که می‌خوام بسازم، بین عکاسی، نقاشی، تصویرگری و طراحی گرافیک جابه‌جا می‌شم.",
+      aboutDetail:"اگر دوست دارید درباره یک پروژه، همکاری یا حتی یک ایده با هم صحبت کنیم، خوشحال می‌شوم از شما بشنوم.",
+      fact1a:"حوزه فعالیت",fact1b:"هنرهای بصری",fact2a:"تحصیلات",fact2b:"در حال تحصیل گرافیک",fact3a:"زمینه‌ها",fact3b:"عکاسی / نقاشی / گرافیک / تصویرگری",
+      portfolioEyebrow:"۰۲ / آثار منتخب",portfolioTitle:"پورتفولیو",
+      swipeHint:"کشیدن راست به چپ: جلو · کشیدن چپ به راست: عقب",
+      contactEyebrow:"۰۳ / تماس",contactTitle:"در ارتباط باشید",contactLead:"اگر دوست دارید درباره یک پروژه، همکاری یا حتی یک ایده با هم صحبت کنیم، خوشحال می‌شوم از شما بشنوم.",
+      instagram:"اینستاگرام",telegram:"تلگرام",phone:"تلفن",storeEyebrow:"۰۴ / آثار و محصولات",storeTitle:"فروشگاه",coming:"به‌زودی",
+      print1:"پرینت ۱",print2:"پرینت ۲",edition1:"ادیشن ۱",edition2:"ادیشن ۲",
+      footer1:"© ۲۰۲۶ محدثه غیاثی",footer2:"Visual Art / Graphic / Photography / Painting / Illustration",panelTitle:"در ارتباط باشید.",
+      rotate:"برای تجربه بهتر می‌توانید گوشی را بچرخانید."
+    }
+  };
 
   const works = [
     ["Untitled I","Graphic / Visual Study"],["Untitled II","Photography / Light"],["Untitled III","Illustration / Form"],["Untitled IV","Graphic / Composition"],
@@ -976,20 +979,6 @@ works.forEach((w,i) => {
     fab.querySelector(".fab-text").textContent = "Contact";
   });
 
-  // Mobile-only, portfolio-only rotation suggestion. It appears for one second.
-  const toast = document.getElementById("rotateToast");
-  const portfolio = document.getElementById("portfolio");
-  let toastShown = false;
-  const mobileQuery = window.matchMedia("(max-width: 900px)");
-  const observer = new IntersectionObserver(entries=>{
-    if(!toastShown && mobileQuery.matches && entries.some(x=>x.isIntersecting)){
-      toastShown = true;
-      toast.classList.add("show");
-      setTimeout(()=>toast.classList.remove("show"),1000);
-      observer.disconnect();
-    }
-  },{threshold:.2});
-  observer.observe(portfolio);
 })();
 </script>
 </body>
