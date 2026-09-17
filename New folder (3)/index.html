@@ -1,15 +1,15 @@
 <!doctype html>
-<html lang="en" dir="ltr">
+<html lang="fa" dir="rtl">
 <head>
   <meta charset="utf-8">
   <meta name="viewport" content="width=device-width, initial-scale=1, viewport-fit=cover">
-  <meta name="description" content="Mohadese Ghiasi — Visual Art — محدثه غیاثی">
-  <meta name="keywords" content="Mohadese Ghiasi, محدثه غیاثی , محدثه غیاثی گرافیک, visual artist, portfolio">
+  <meta name="description" content="محدثه غیاثی پورتفولیو | Mohadese Ghiasi Portfolio — پورتفولیو گرافیک، هنرهای بصری، عکاسی، نقاشی و تصویرگری">
+  <meta name="keywords" content="محدثه غیاثی, محدثه غیاثی پورتفولیو, محدثه غیاثی گرافیک, محدثه غیاثی portfolio, Mohadese Ghiasi, Mohadese Ghiasi Portfolio, graphic design portfolio, visual artist portfolio">
   <meta name="author" content="Mohadese Ghiasi">
   <meta name="robots" content="index,follow">
-  <meta property="og:title" content="Mohadese Ghiasi — Visual Art — محدثه غیاثی">
+  <meta property="og:title" content="محدثه غیاثی پورتفولیو | Mohadese Ghiasi Portfolio">
   <meta property="og:description" content="Portfolio of Mohadese Ghiasi, a visual artist working across graphic design, photography, painting and illustration.">
-  <title>Mohadese Ghiasi | Graphic Design Portfolio</title>
+  <title>محدثه غیاثی پورتفولیو | Mohadese Ghiasi Portfolio</title>
   
 <script type="application/ld+json">
 {
@@ -40,6 +40,7 @@
       font-weight:400;
       font-style:normal;
       font-display:swap;
+      unicode-range:U+0600-06FF,U+0750-077F,U+08A0-08FF,U+FB50-FDFF,U+FE70-FEFF;
     }
     @font-face{
       font-family:"Ekraan";
@@ -47,6 +48,7 @@
       font-weight:600;
       font-style:normal;
       font-display:swap;
+      unicode-range:U+0600-06FF,U+0750-077F,U+08A0-08FF,U+FB50-FDFF,U+FE70-FEFF;
     }
 
     :root{
@@ -680,6 +682,23 @@
     .contact-panel{
       box-shadow:0 20px 55px rgba(0,0,0,.10);
     }
+
+    /* BIRTHDAY LOADER */
+    body.loader-active{overflow:hidden}
+    .birthday-loader{position:fixed;inset:0;z-index:9999;display:grid;place-items:center;overflow:hidden;background:var(--bg);color:var(--ink);isolation:isolate;opacity:1;visibility:visible;transition:opacity .8s ease,visibility .8s ease}
+    .birthday-loader.is-done{opacity:0;visibility:hidden;pointer-events:none}
+    .birthday-loader:before{content:"";position:absolute;inset:0;background:radial-gradient(circle at 50% 50%,rgba(63,115,56,.16),transparent 34%),var(--bg);z-index:-2}
+    .birthday-loader:after{content:"";position:absolute;inset:0;background-image:radial-gradient(rgba(41,35,29,.11) .7px,transparent .7px);background-size:12px 12px;opacity:.28;z-index:-1;pointer-events:none}
+    html.dark .birthday-loader:after{background-image:radial-gradient(rgba(238,232,220,.14) .7px,transparent .7px)}
+    .birthday-loader-content{position:relative;z-index:5;width:min(850px,88vw);text-align:center;animation:birthdayEntrance 1s var(--ease) both}
+    .birthday-kicker{color:var(--green);font-size:8px;font-weight:700;letter-spacing:.28em;text-transform:uppercase;margin-bottom:18px}
+    .birthday-title{font:400 clamp(48px,8vw,104px)/.84 "DM Serif Display",serif;letter-spacing:-.065em;text-wrap:balance}
+    .birthday-subtitle{margin-top:18px;font:400 clamp(20px,3vw,36px)/1 "DM Serif Display",serif;color:var(--green);letter-spacing:-.025em;text-transform:none}
+    .birthday-progress{width:min(280px,52vw);height:3px;margin:32px auto 13px;background:var(--line);overflow:hidden;border-radius:99px}
+    .birthday-progress i{display:block;width:100%;height:100%;transform-origin:left center;transform:scaleX(0);background:linear-gradient(90deg,#9d7c65 0%,#c3a48c 22%,#e0c7b2 45%,#b8977f 68%,#d7b9a0 100%);animation:birthdayProgress 5s linear forwards}
+    .birthday-count{color:var(--muted);font-size:8px;letter-spacing:.18em;font-variant-numeric:tabular-nums}
+    @keyframes birthdayProgress{to{transform:scaleX(1)}} @keyframes birthdayEntrance{from{opacity:0;transform:translateY(18px) scale(.97)}to{opacity:1;transform:none}}
+    body.loader-active > *:not(#birthdayLoader){filter:blur(11px);transform:translateZ(0)}
     @media(prefers-reduced-motion:reduce){
       *,*::before,*::after{
         scroll-behavior:auto!important;
@@ -755,6 +774,18 @@
 </head>
 
 <body>
+
+  <!-- Birthday loading overlay -->
+  <div id="birthdayLoader" class="birthday-loader" aria-label="Happy Birthday">
+<div class="birthday-loader-content">
+      <div class="birthday-kicker">A LITTLE CELEBRATION</div>
+      <div class="birthday-title">Happy Birthday</div>
+      <div class="birthday-subtitle">queen of joobism:)</div>
+      <div class="birthday-progress"><i></i></div>
+      <div class="birthday-count">05</div>
+    </div>
+  </div>
+
   <div class="nav-cover"></div>
 
   <header>
@@ -877,11 +908,6 @@
             <span data-i18n="telegram">Telegram</span>
             <small>@joobism</small>
           </a>
-          <a class="contact-row" href="tel:+982133401226">
-            <img src="images/phone.svg" alt="">
-            <span data-i18n="phone">Phone</span>
-            <small>021 33401226</small>
-          </a>
           <a class="contact-row" href="mailto:Mohadeseghiasi.portfolio@gmail.com">
             <img src="images/email.svg" alt="">
             <span>Email</span>
@@ -909,9 +935,6 @@
     <a class="panel-row" href="https://t.me/joobism" target="_blank" rel="noopener">
       <img src="images/telegram.svg" alt=""><div><small data-i18n="telegram">Telegram</small><strong>@joobism</strong></div>
     </a>
-    <a class="panel-row" href="tel:+982133401226">
-      <img src="images/phone.svg" alt=""><div><small data-i18n="phone">Phone</small><strong>021 33401226</strong></div>
-    </a>
     <a class="panel-row" href="mailto:Mohadeseghiasi.portfolio@gmail.com">
       <img src="images/email.svg" alt=""><div><small>Email</small><strong>Mohadeseghiasi.portfolio@gmail.com</strong></div>
     </a>
@@ -919,6 +942,35 @@
 
 <script>
 (() => {
+  // Birthday loader: keep the page ready while the 5-second celebration runs.
+  const birthdayLoader = document.getElementById("birthdayLoader");
+  document.body.classList.add("loader-active");
+
+  const birthdayCount = birthdayLoader?.querySelector(".birthday-count");
+  const birthdayStart = performance.now();
+  const birthdayDuration = 5000;
+
+  function finishBirthdayLoader(){
+    if(!birthdayLoader) return;
+    birthdayLoader.classList.add("is-done");
+    document.body.classList.remove("loader-active");
+    setTimeout(() => birthdayLoader.remove(), 750);
+  }
+
+  function runBirthdayLoader(){
+    const remaining = Math.max(0, birthdayDuration - (performance.now() - birthdayStart));
+    if(birthdayCount){
+      const secondsLeft = Math.max(0, Math.ceil(remaining / 1000));
+      birthdayCount.textContent = String(secondsLeft).padStart(2,"0");
+    }
+    if(remaining <= 0){
+      finishBirthdayLoader();
+    } else {
+      requestAnimationFrame(runBirthdayLoader);
+    }
+  }
+  requestAnimationFrame(runBirthdayLoader);
+
   const I18N = {
     en:{
       brand:"Mohadese Ghiasi",brandSub:"Visual Art",
@@ -1120,7 +1172,7 @@ works.forEach((w,i) => {
   const savedTheme = localStorage.getItem("mohadese-theme");
   setTheme(savedTheme === "dark");
 
-  const savedLang = localStorage.getItem("mohadese-lang") || "en";
+  const savedLang = "fa";
   setLanguage(savedLang);
 
   themeToggle.addEventListener("click",()=>{
