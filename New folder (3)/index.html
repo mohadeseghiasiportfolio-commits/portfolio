@@ -683,22 +683,6 @@
       box-shadow:0 20px 55px rgba(0,0,0,.10);
     }
 
-    /* BIRTHDAY LOADER */
-    body.loader-active{overflow:hidden}
-    .birthday-loader{position:fixed;inset:0;z-index:9999;display:grid;place-items:center;overflow:hidden;background:var(--bg);color:var(--ink);isolation:isolate;opacity:1;visibility:visible;transition:opacity .8s ease,visibility .8s ease}
-    .birthday-loader.is-done{opacity:0;visibility:hidden;pointer-events:none}
-    .birthday-loader:before{content:"";position:absolute;inset:0;background:radial-gradient(circle at 50% 50%,rgba(63,115,56,.16),transparent 34%),var(--bg);z-index:-2}
-    .birthday-loader:after{content:"";position:absolute;inset:0;background-image:radial-gradient(rgba(41,35,29,.11) .7px,transparent .7px);background-size:12px 12px;opacity:.28;z-index:-1;pointer-events:none}
-    html.dark .birthday-loader:after{background-image:radial-gradient(rgba(238,232,220,.14) .7px,transparent .7px)}
-    .birthday-loader-content{position:relative;z-index:5;width:min(850px,88vw);text-align:center;animation:birthdayEntrance 1s var(--ease) both}
-    .birthday-kicker{color:var(--green);font-size:8px;font-weight:700;letter-spacing:.28em;text-transform:uppercase;margin-bottom:18px}
-    .birthday-title{font:400 clamp(48px,8vw,104px)/.84 "DM Serif Display",serif;letter-spacing:-.065em;text-wrap:balance}
-    .birthday-subtitle{margin-top:18px;font:400 clamp(20px,3vw,36px)/1 "DM Serif Display",serif;color:var(--green);letter-spacing:-.025em;text-transform:none}
-    .birthday-progress{width:min(280px,52vw);height:3px;margin:32px auto 13px;background:var(--line);overflow:hidden;border-radius:99px}
-    .birthday-progress i{display:block;width:100%;height:100%;transform-origin:left center;transform:scaleX(0);background:linear-gradient(90deg,#9d7c65 0%,#c3a48c 22%,#e0c7b2 45%,#b8977f 68%,#d7b9a0 100%);animation:birthdayProgress 5s linear forwards}
-    .birthday-count{color:var(--muted);font-size:8px;letter-spacing:.18em;font-variant-numeric:tabular-nums}
-    @keyframes birthdayProgress{to{transform:scaleX(1)}} @keyframes birthdayEntrance{from{opacity:0;transform:translateY(18px) scale(.97)}to{opacity:1;transform:none}}
-    body.loader-active > *:not(#birthdayLoader){filter:blur(11px);transform:translateZ(0)}
     @media(prefers-reduced-motion:reduce){
       *,*::before,*::after{
         scroll-behavior:auto!important;
@@ -774,17 +758,6 @@
 </head>
 
 <body>
-
-  <!-- Birthday loading overlay -->
-  <div id="birthdayLoader" class="birthday-loader" aria-label="Happy Birthday">
-<div class="birthday-loader-content">
-      <div class="birthday-kicker">A LITTLE CELEBRATION</div>
-      <div class="birthday-title">Happy Birthday</div>
-      <div class="birthday-subtitle">queen of joobism:)</div>
-      <div class="birthday-progress"><i></i></div>
-      <div class="birthday-count">05</div>
-    </div>
-  </div>
 
   <div class="nav-cover"></div>
 
@@ -866,8 +839,8 @@
         <div class="book-controls">
           <div class="book-hint" data-i18n="swipeHint">Swipe right → left to move forward · swipe left → right to go back</div>
           <div class="arrows">
-            <button class="round" id="prev" aria-label="Previous page">←</button>
-            <button class="round" id="next" aria-label="Next page">→</button>
+            <button class="round" id="prev" aria-label="Previous page">→</button>
+            <button class="round" id="next" aria-label="Next page">←</button>
           </div>
         </div>
       </div>
@@ -942,35 +915,6 @@
 
 <script>
 (() => {
-  // Birthday loader: keep the page ready while the 5-second celebration runs.
-  const birthdayLoader = document.getElementById("birthdayLoader");
-  document.body.classList.add("loader-active");
-
-  const birthdayCount = birthdayLoader?.querySelector(".birthday-count");
-  const birthdayStart = performance.now();
-  const birthdayDuration = 5000;
-
-  function finishBirthdayLoader(){
-    if(!birthdayLoader) return;
-    birthdayLoader.classList.add("is-done");
-    document.body.classList.remove("loader-active");
-    setTimeout(() => birthdayLoader.remove(), 750);
-  }
-
-  function runBirthdayLoader(){
-    const remaining = Math.max(0, birthdayDuration - (performance.now() - birthdayStart));
-    if(birthdayCount){
-      const secondsLeft = Math.max(0, Math.ceil(remaining / 1000));
-      birthdayCount.textContent = String(secondsLeft).padStart(2,"0");
-    }
-    if(remaining <= 0){
-      finishBirthdayLoader();
-    } else {
-      requestAnimationFrame(runBirthdayLoader);
-    }
-  }
-  requestAnimationFrame(runBirthdayLoader);
-
   const I18N = {
     en:{
       brand:"Mohadese Ghiasi",brandSub:"Visual Art",
@@ -998,7 +942,7 @@
       aboutDetail:"اگر دوست دارید درباره یک پروژه، همکاری یا حتی یک ایده با هم صحبت کنیم، خوشحال می‌شوم از شما بشنوم.",
       fact1a:"حوزه فعالیت",fact1b:"هنرهای بصری",fact2a:"تحصیلات",fact2b:"در حال تحصیل گرافیک",fact3a:"زمینه‌ها",fact3b:"عکاسی / نقاشی / گرافیک / تصویرگری",
       portfolioEyebrow:"۰۲ / آثار منتخب",portfolioTitle:"پورتفولیو",
-      swipeHint:"کشیدن راست به چپ: جلو · کشیدن چپ به راست: عقب",
+      swipeHint:"کشیدن راست به چپ: عقب · کشیدن چپ به راست: جلو",
       contactEyebrow:"۰۳ / تماس",contactTitle:"در ارتباط باشید",contactLead:"اگر دوست دارید درباره یک پروژه، همکاری یا حتی یک ایده با هم صحبت کنیم، خوشحال می‌شوم از شما بشنوم.",
       instagram:"اینستاگرام",telegram:"تلگرام",phone:"تلفن",storeEyebrow:"۰۴ / آثار و محصولات",storeTitle:"فروشگاه",coming:"به‌زودی",
       print1:"پرینت ۱",print2:"پرینت ۲",edition1:"ادیشن ۱",edition2:"ادیشن ۲",
